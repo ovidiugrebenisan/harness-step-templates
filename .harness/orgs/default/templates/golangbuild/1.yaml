@@ -1,0 +1,17 @@
+template:
+  name: golang-build
+  identifier: golangbuild
+  versionLabel: "1"
+  type: Step
+  orgIdentifier: default
+  tags:
+    golang: ""
+    build: ""
+  spec:
+    type: Run
+    spec:
+      connectorRef: org.dockerhub
+      image: golang:tip-alpine3.23
+      shell: Sh
+      command: go build
+    description: Build go binary
